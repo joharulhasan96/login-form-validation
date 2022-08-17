@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login-form</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <h1 style="text-align: center;margin-top:15px;">Login Form</h1>
+   
+<section class="login-form">  
+<form action="" onsubmit="sbmt()">
+    <div class="first-name">
+        <h3>First Name</h3>
+        <input type="text" onkeyup="checkFname()" name="first-name" id="first-name" placeholder="Enter Your First Name"><div class="alert-fname"><i class="fa-solid fa-circle-exclamation icon"></i></div><div class="ok-fname"><i class="fa-solid fa-circle-check"></i></div></input>
+        <br>
+        <span class="fname-short-remark" style="display:none;color:red;">Your first name is too short</span>
+        <span class="fname-long-remark" style="display:none;color:red;">Your first name is too long</span>
+    </div>
+
+    <div class="last-name">
+        <h3>Last Name</h3>
+        <input type="text" onkeyup="checkLname()" name="last-name" id="last-name" placeholder="Enter Your last Name"><div class="alert-lname"><i class="fa-solid fa-circle-exclamation icon"></i></div><div class="ok-lname"><i class="fa-solid fa-circle-check"></i></div></input>
+        <br>
+        <span class="lname-short-remark" style="display:none;color:red;">Your last name is too short</span>
+        <span class="lname-long-remark" style="display:none;color:red;">Your last name is too long</span>
+    </div>
+
+    <div class="email">
+        <h3>Email</h3>
+        <input type="email" onkeyup="checkEmail()" name="email" id="email" placeholder="Enter Your Email Id"><div class="alert-email"><i class="fa-solid fa-circle-exclamation icon"></i></div><div class="ok-email"><i class="fa-solid fa-circle-check"></i></div></input>
+        <br>
+        <span class="email-remark" style="display:none;color:red;">Your email id is invalid</span>
+    </div>
+
+    <div class="password-section">
+    <h3>Password</h3>
+    <input type="text" onkeyup="press()" class="" name="pwd" id="password" autocomplete="off" placeholder="Enter Your Password"><div class="alert-pwd"><i class="fa-solid fa-circle-exclamation icon"></i></div><div class="ok-pwd"><i class="fa-solid fa-circle-check"></i></div></input>
+    <br/>
+    <span class="pwd-weak-remark" style="display:none;color:red;">Your password is very weak</span>
+    <span class="pwd-medium-remark" style="display:none;color:yellow;">Your password is medium</span>
+    <span class="pwd-strong-remark" style="display:none;color:green;">Your password is strong</span>
+    <br>
+    <div class="box">
+    </div>
+    <input type="button" onclick="generatePwd()" class="gnrtPwd" value="Generate Password">
+    </div>
+
+    <div class="pwd-strenth-result">
+        
+        <div class="strenth-result">
+            <ul>
+                <li><span class="lower-case"><i class="fa-solid fa-circle-check"></i> Use atleast one lower case</span></li>
+                <li><span class="upper-case"><i class="fa-solid fa-circle-check"></i> Use atleast one upper case</span></li>
+                <li><span class="number"><i class="fa-solid fa-circle-check"></i> Use atleast one Number(1-9)</span></li>
+                <li><span class="special-character"><i class="fa-solid fa-circle-check"></i> Use atleast one Special Characters(!@#$%^&*)</span></li>
+                <li><span class="eight-character"><i class="fa-solid fa-circle-check"></i> Use atleast eight Characters</span></li>
+            </ul>
+        </div>
+    </div>
+    
+    <button type="submit"  style="margin-top:10px;" class="sbmt">Create Your Account</button>
+
+</form>
+</section>
+
+
+<script src="js/app.js"></script>
+</body>
+</html>
